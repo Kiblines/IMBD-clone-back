@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const userRoutes = require("./routes/users");
 
 const app = express();
 
@@ -20,3 +21,5 @@ app.listen(port, () => {
 app.get("/", (req, res) => {
   res.send("Bienvenue sur mon API de films IMDB!");
 });
+
+app.use("api/users", userRoutes);
