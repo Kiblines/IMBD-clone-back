@@ -4,7 +4,6 @@ const User = require("../models/User");
 const bcrypt = require("bcrypt");
 
 router.use((req, res, next) => {
-  console.log("suis je ici?");
   console.log(req.method);
   next();
 });
